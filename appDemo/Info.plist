@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb772840337417338</string>
+				<string>com.googleusercontent.apps.82538688658-7svjqjs4v53v8kvh14q2jontlro5keem</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>772840337417338</string>
+	<key>FacebookClientToken</key>
+	<string>088071e2449e7218f13178869bddbefb</string>
+	<key>FacebookDisplayName</key>
+	<string>appDemo</string>
+	<key>GIDClientID</key>
+	<string>82538688658-7svjqjs4v53v8kvh14q2jontlro5keem.apps.googleusercontent.com</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -15,8 +38,6 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
