@@ -49,6 +49,7 @@
 		BA33D94E29E3758400E14037 /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33D94C29E3758300E14037 /* LoginRouterProtocol.swift */; };
 		BA33D94F29E3758400E14037 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33D94D29E3758400E14037 /* LoginRouter.swift */; };
 		BA33D95129E3C43800E14037 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BA33D95029E3C43800E14037 /* .gitignore */; };
+		BA42278A29E6684D003457FB /* RIgesterViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42278929E6684D003457FB /* RIgesterViewContoller.swift */; };
 		BAA03EFB29DCB6A8004ADF46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA03EFA29DCB6A8004ADF46 /* AppDelegate.swift */; };
 		BAA03EFD29DCB6A8004ADF46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA03EFC29DCB6A8004ADF46 /* SceneDelegate.swift */; };
 		BAA03EFF29DCB6A8004ADF46 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA03EFE29DCB6A8004ADF46 /* ViewController2.swift */; };
@@ -123,6 +124,7 @@
 		BA33D94C29E3758300E14037 /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
 		BA33D94D29E3758400E14037 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		BA33D95029E3C43800E14037 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BA42278929E6684D003457FB /* RIgesterViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIgesterViewContoller.swift; sourceTree = "<group>"; };
 		BAA03EF729DCB6A8004ADF46 /* appDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA03EFA29DCB6A8004ADF46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAA03EFC29DCB6A8004ADF46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				BAA03F2A29DCC10D004ADF46 /* GoogleService-Info.plist */,
 				BAA03EFE29DCB6A8004ADF46 /* ViewController2.swift */,
 				BAA03F0829DCB6AA004ADF46 /* Info.plist */,
+				BA42278929E6684D003457FB /* RIgesterViewContoller.swift */,
 			);
 			path = appDemo;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				BA33D8FF29E0F59C00E14037 /* ApiManager.swift in Sources */,
 				BA33D90A29E0F5F400E14037 /* UserLocalPersistence.swift in Sources */,
 				BA33D91829E0F68300E14037 /* LoginRepositpryDelegate.swift in Sources */,
+				BA42278A29E6684D003457FB /* RIgesterViewContoller.swift in Sources */,
 				BA33D91129E0F64400E14037 /* LoginRepository.swift in Sources */,
 				BA33D92F29E0F78B00E14037 /* ViewController.swift in Sources */,
 				BA33D90729E0F5EA00E14037 /* UserPersistenceKeyChain.swift in Sources */,
