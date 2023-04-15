@@ -309,7 +309,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indevidual User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf6-ud-2JO">
                                                 <rect key="frame" x="0.0" y="61" width="109.5" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" red="0.60300968600000004" green="0.63327066620000005" blue="0.62391922359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="kZN-FL-1mg">
@@ -349,7 +349,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corporate User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-hx-mEW">
                                                 <rect key="frame" x="0.0" y="61" width="110" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" red="0.60300968600000004" green="0.63327066620000005" blue="0.62391922359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNl-mr-9jR">
@@ -389,7 +389,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ0-oG-KX6">
                                                 <rect key="frame" x="0.0" y="61" width="109.5" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" red="0.60300968600000004" green="0.63327066620000005" blue="0.62391922359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="store" translatesAutoresizingMaskIntoConstraints="NO" id="jc5-2B-HqW">
@@ -828,17 +828,20 @@
                                     <constraint firstItem="QiP-Q6-57A" firstAttribute="leading" secondItem="3jN-wa-qwW" secondAttribute="leading" id="xga-tZ-TUr"/>
                                 </constraints>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-58-Hva">
-                                <rect key="frame" x="27" y="820" width="349" height="48"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-58-Hva">
+                                <rect key="frame" x="82" y="820" width="207" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fp-Dh-Ws9">
-                                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="48"/>
+                                        <rect key="frame" x="0.0" y="15.5" width="170.5" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170.5" id="Z40-cJ-kEZ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.16734261550000001" green="0.39627078719999997" blue="0.64806706780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a3-cv-DbK">
-                                        <rect key="frame" x="174.5" y="0.0" width="174.5" height="48"/>
+                                        <rect key="frame" x="171.5" y="15.5" width="35.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0039215686269999999" green="0.62745098040000002" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -851,9 +854,9 @@
                         <constraints>
                             <constraint firstItem="Jcn-CN-9tI" firstAttribute="bottom" secondItem="3jN-wa-qwW" secondAttribute="bottom" constant="50" id="9zN-HH-wih"/>
                             <constraint firstItem="Jcn-CN-9tI" firstAttribute="trailing" secondItem="3jN-wa-qwW" secondAttribute="trailing" constant="-1" id="CgM-8U-bth"/>
+                            <constraint firstItem="2yV-58-Hva" firstAttribute="leading" secondItem="Jcn-CN-9tI" secondAttribute="leading" constant="82" id="ID2-FY-ra7"/>
                             <constraint firstItem="g2v-NM-58r" firstAttribute="leading" secondItem="Jcn-CN-9tI" secondAttribute="leading" id="IhA-rc-yD1"/>
                             <constraint firstItem="iSW-lQ-7h3" firstAttribute="top" secondItem="sNW-Jp-aVa" secondAttribute="bottom" constant="0.5" id="MfB-jd-boU"/>
-                            <constraint firstItem="Jcn-CN-9tI" firstAttribute="trailing" secondItem="9Fp-Dh-Ws9" secondAttribute="trailing" constant="163.5" id="PjY-WZ-mS6"/>
                             <constraint firstItem="2yV-58-Hva" firstAttribute="top" secondItem="3jN-wa-qwW" secondAttribute="bottom" constant="8" id="VAt-ML-Mpq"/>
                             <constraint firstAttribute="bottom" secondItem="2yV-58-Hva" secondAttribute="bottom" constant="28" id="WDD-fe-sgB"/>
                             <constraint firstItem="Jcn-CN-9tI" firstAttribute="trailing" secondItem="g2v-NM-58r" secondAttribute="trailing" id="Xei-Ap-PN5"/>
@@ -861,7 +864,6 @@
                             <constraint firstItem="iSW-lQ-7h3" firstAttribute="leading" secondItem="Jcn-CN-9tI" secondAttribute="leading" constant="20" id="eZf-db-bpd"/>
                             <constraint firstItem="Jcn-CN-9tI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sNW-Jp-aVa" secondAttribute="trailing" symbolic="YES" id="kiI-FQ-9ay"/>
                             <constraint firstItem="Jcn-CN-9tI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iSW-lQ-7h3" secondAttribute="trailing" symbolic="YES" id="lXs-DM-Dvz"/>
-                            <constraint firstItem="9Fp-Dh-Ws9" firstAttribute="leading" secondItem="Jcn-CN-9tI" secondAttribute="leading" constant="37" id="nlf-2B-PGa"/>
                             <constraint firstItem="3jN-wa-qwW" firstAttribute="top" secondItem="g2v-NM-58r" secondAttribute="bottom" constant="1.5" id="rIC-5s-Key"/>
                             <constraint firstItem="sNW-Jp-aVa" firstAttribute="top" secondItem="Jcn-CN-9tI" secondAttribute="top" id="rhH-fb-s6L"/>
                             <constraint firstItem="QiP-Q6-57A" firstAttribute="width" secondItem="Jcn-CN-9tI" secondAttribute="width" multiplier="0.998675" id="v5b-YT-Y5J"/>
@@ -879,12 +881,18 @@
                         <outlet property="confirmField" destination="Sk5-7g-8Ac" id="3R9-Va-ivf"/>
                         <outlet property="contactPerson" destination="7BD-6Y-1Ex" id="qhS-vb-C6t"/>
                         <outlet property="contentScrollView" destination="3jN-wa-qwW" id="9Cv-a3-nf6"/>
+                        <outlet property="coroprateUserLabel" destination="U9d-hx-mEW" id="IrY-6U-qkA"/>
+                        <outlet property="croporateImage" destination="Knl-2b-UiT" id="Rhp-xl-Fth"/>
                         <outlet property="croporateName" destination="eIW-vh-Qgs" id="XXY-Mw-1ht"/>
                         <outlet property="croporateView" destination="Iku-y1-58D" id="HJL-mC-9qd"/>
                         <outlet property="deleteButton" destination="RIg-2A-HEw" id="iGy-Fb-pxt"/>
                         <outlet property="emailField" destination="Y2D-Vx-tdM" id="cMX-Wj-dpv"/>
                         <outlet property="firstNameField" destination="TSs-bq-oUr" id="ekM-ke-xZ4"/>
+                        <outlet property="healthCenterImage" destination="jc5-2B-HqW" id="Esz-Lf-auJ"/>
+                        <outlet property="healthCenterLabel" destination="uJ0-oG-KX6" id="1nJ-gt-XUM"/>
                         <outlet property="healthView" destination="dhm-nc-LSH" id="jol-if-VMm"/>
+                        <outlet property="indevidualUserImage" destination="kZN-FL-1mg" id="Eth-V5-uzr"/>
+                        <outlet property="indevidualUserLabel" destination="lf6-ud-2JO" id="I3T-zk-POK"/>
                         <outlet property="indevidualUserView" destination="6Q3-Yf-y3e" id="tgL-hQ-pyd"/>
                         <outlet property="lastNameField" destination="QxO-18-utM" id="hqB-Z2-BdS"/>
                         <outlet property="password" destination="isA-Ac-GsO" id="6I5-md-I2v"/>

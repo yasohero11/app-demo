@@ -11,55 +11,73 @@ import UIKit
 
 class RigesterViewContorller: UIViewController {
     
+    struct RegisterType{
+        var typeImage : UIImageView!
+        
+        var typeLabel : UILabel!
+        var typeButton : UIView!
+        var typeView : UIView!
+        
+        
+    }
+    
     @IBOutlet weak var contentScrollView: UIScrollView!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var typeButtonsHView: UIStackView!
     @IBOutlet weak var Button3: UIView!
     @IBOutlet weak var Button2: UIView!
     @IBOutlet weak var Button1: UIView!
-    
     @IBOutlet weak var firstNameField: UITextField!
-    
     @IBOutlet weak var lastNameField: UITextField!
-    
     @IBOutlet weak var emailField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var confirmField: UITextField!
-    
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var indevidualUserView: UIView!
-    
-   
     @IBOutlet weak var selectCityField: UITextField!
-    
     @IBOutlet weak var deleteButton: UIImageView!
-    
     @IBOutlet weak var croporateView: UIView!
-    
     @IBOutlet weak var croporateName: UITextField!
-    
     @IBOutlet weak var citySelector: UITextField!
-    
     @IBOutlet weak var phoneNumber: UITextField!
-    
     @IBOutlet weak var contactPerson: UITextField!
-    
     @IBOutlet weak var uploadLicense: UITextField!
-    
     @IBOutlet weak var vatNumber: UITextField!
-    
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confPassowrd: UITextField!
-    
     @IBOutlet weak var healthView: UIView!
+    @IBOutlet weak var indevidualUserImage: UIImageView!
+    @IBOutlet weak var indevidualUserLabel: UILabel!
+    @IBOutlet weak var coroprateUserLabel: UILabel!
+    @IBOutlet weak var croporateImage: UIImageView!
+    @IBOutlet weak var healthCenterLabel: UILabel!
+    @IBOutlet weak var healthCenterImage: UIImageView!
     
     var selectedView : UIView? =  nil
     var seletcedButton : UIView? = nil
     
+    var indevidualUserObject : RegisterType? = nil
+    var croporateUserObject : RegisterType? = nil
+    var healthCenterObject : RegisterType? = nil
+    
+    var selectedType : RegisterType? = nil
+    var oldSelectedImage : UIImage? =  nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        indevidualUserObject =  RegisterType(typeImage: indevidualUserImage,typeLabel: indevidualUserLabel,typeButton: Button1,typeView: indevidualUserView)
+        
+        croporateUserObject =  RegisterType(typeImage: croporateImage,typeLabel: coroprateUserLabel,typeButton: Button2,typeView: croporateView)
+        
+        
+        healthCenterObject =  RegisterType(typeImage: healthCenterImage,typeLabel: healthCenterLabel,typeButton: Button3,typeView: healthView)
+        
+        
+        [indevidualUserObject, croporateUserObject, healthCenterObject].forEach{
+            obj in
+            
+            obj?.typeImage.image = obj?.typeImage.image?.maskWithColor(color: UIColor.lightGray)
+        }
         
         [Button1, Button2, Button3].forEach { button in
             button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor
@@ -104,10 +122,10 @@ class RigesterViewContorller: UIViewController {
     @IBAction func onTypeButtonClicked(_ sender: UIButton) {
         topConstraint.constant = 10
         contentScrollView.isHidden =  false
-        UIColorFromHex(rgbValue: 0x323232,alpha: 1)
+       
         UIStackView.animate(withDuration: 0.5) {
                 self.view.layoutIfNeeded()
-            self.seletcedButton?.backgroundColor = UIColor.white
+            self.unselectRegisterType()
                 
             }
         
@@ -117,22 +135,17 @@ class RigesterViewContorller: UIViewController {
      
         switch sender.tag{
         case 1 :
-            Button1.backgroundColor = UIColorFromHex(rgbValue: 0x01A0A3,alpha: 1)
-            seletcedButton = Button1
-            indevidualUserView.isHidden = false
-            selectedView = indevidualUserView
+            setSelectedType(registerType:indevidualUserObject)
+            selectedType = indevidualUserObject
+           
             break
         case 2:
-            Button2.backgroundColor = UIColorFromHex(rgbValue: 0x01A0A3,alpha: 1)
-            seletcedButton = Button2
-            croporateView.isHidden = false
-            selectedView = croporateView
+            setSelectedType(registerType:croporateUserObject)
+            selectedType = croporateUserObject
             break
         case 3:
-            Button3.backgroundColor = UIColorFromHex(rgbValue: 0x01A0A3,alpha: 1)
-            seletcedButton = Button3
-            healthView.isHidden = false
-            selectedView = healthView
+            setSelectedType(registerType: healthCenterObject)
+            selectedType = healthCenterObject
             break
             
         default :
@@ -142,7 +155,51 @@ class RigesterViewContorller: UIViewController {
     }
     
     
+    func setSelectedType(registerType : RegisterType?){
+        registerType?.typeButton.backgroundColor = UIColorFromHex(rgbValue: 0x01A0A3,alpha: 1)
+       
+        registerType?.typeLabel.textColor = UIColor.white
+        oldSelectedImage =  registerType?.typeImage.image
+        registerType?.typeImage.image =   oldSelectedImage?.maskWithColor(color: UIColor.white)
+        registerType?.typeView.isHidden =  false
+           
+    }
+    
+    func unselectRegisterType(){
+        selectedType?.typeImage.image = oldSelectedImage
+        selectedType?.typeButton.backgroundColor = UIColor.white
+        selectedType?.typeLabel.textColor = UIColor.lightGray
+        selectedType?.typeView.isHidden =  true
+    }
     
     
     
+    
+}
+
+extension UIImage {
+
+    func maskWithColor(color: UIColor) -> UIImage? {
+        let maskImage = cgImage!
+
+        let width = size.width
+        let height = size.height
+        let bounds = CGRect(x: 0, y: 0, width: width, height: height)
+
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
+
+        context.clip(to: bounds, mask: maskImage)
+        context.setFillColor(color.cgColor)
+        context.fill(bounds)
+
+        if let cgImage = context.makeImage() {
+            let coloredImage = UIImage(cgImage: cgImage)
+            return coloredImage
+        } else {
+            return nil
+        }
+    }
+
 }
